@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mister Cocktail</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+  <nav>
+    <%= link_to cocktails_path do %>
+      <span><i class="fas fa-home"></i> Mister cocktail</span>
+    <% end %>
+
+    <form action="/cocktails" method="GET" class="form-inline">
+      <input type="text" name="query" id="query" class="form-inline-input">
+      <input type="submit" value="Search" class="form-inline-submit">  
+    </form>
+
+    <a href="#">Add cocktail</a>
+  </nav>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+.container-cocktails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.container-cocktails a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: all ease-in-out 0.2s;
+}
+.container-cocktails a:hover {
+  transform: scale(1.02);
+}
